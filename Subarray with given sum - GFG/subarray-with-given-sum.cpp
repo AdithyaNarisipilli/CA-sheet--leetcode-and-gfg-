@@ -13,7 +13,7 @@ class Solution
         int sum=0,i=0,j=0;
         if(s==0){
             return {-1};
-        }
+        }//always take smaller array to define i and j in while loop
     while((i<n) && (j<=n)){
            if(sum<s){
              sum+=arr[j];
