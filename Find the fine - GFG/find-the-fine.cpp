@@ -11,23 +11,18 @@ class Solution{
   public:
     long long int totalFine(int n, int date, int car[], int fine[])
     {
-        long long evensum=0,oddsum=0;
-        if(date%2){
+        
+        long sum=0;
        for(int i=0;i<n;i++){
-           if(car[i]%2==0){
-              evensum+=fine[i]; 
+           if(date%2==0 && car[i]%2!=0){
+               sum += fine[i];
+           }
+           if(date%2!=0 && car[i]%2==0){
+               sum += fine[i];
            }
        }
-       return evensum;
-        }
-        else{
-           for(int i=0;i<n;i++){
-           if(car[i]%2==1){
-              oddsum+=fine[i]; 
-           }
-          } 
-       return oddsum;
-        }
+       return sum;
+    
     }
 };
 
