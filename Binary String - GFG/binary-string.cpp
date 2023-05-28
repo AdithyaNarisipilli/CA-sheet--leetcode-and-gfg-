@@ -10,7 +10,7 @@ class Solution
     public:
     //Function to count the number of substrings that start and end with 1.
     long binarySubstring(int n, string a){
-        long x=0;
+        long x=0;//it is nothing but selecting two 1s from n digits
         for(int i=0;i<n;i++){
             if(a[i]=='1'){
                 x++;
