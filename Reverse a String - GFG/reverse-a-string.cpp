@@ -6,8 +6,22 @@
 using namespace std;
 
 
-string reverseWord(string str);
 
+// } Driver Code Ends
+//User function Template for C++
+
+string reverseWord(string str){
+    int n=str.length()/2;
+    int l=str.length();
+  for(int i=0;i<n;i++){
+      swap(str[i],str[l-1-i]);
+  }
+  return str;
+}
+
+
+
+//{ Driver Code Starts.
 
 int main() {
 	
@@ -26,16 +40,3 @@ int main() {
 
 
 // } Driver Code Ends
-
-
-//User function Template for C++
-
-string reverseWord(string str){
-    
-  int i=0,j=str.size()-1;
-  while(i<j){
-      swap(str[i++],str[j--]);
-  }
-  return str;
-}
-
