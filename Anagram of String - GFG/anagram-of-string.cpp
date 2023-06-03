@@ -29,25 +29,19 @@ int main()
 // to be removed to make two strings anagram
 int remAnagram(string str1, string str2)
 {
-    int m=str1.length();
-    int n=str2.length();
-    sort(str1.begin(),str1.end());
-    sort(str2.begin(),str2.end());
+    //dont use sort in O(n) complexity instead use hashing in this sum
+    int arr[26]={0};
+    for(char it: str1){
+        arr[it-'a']++;
+    }
+    for(char it: str2){
+        arr[it-'a']--;
+    }
     int ans=0;
-    int i=0,j=0;
-    int maxnum=max(m,n);
-    while(i<m&&j<n){
-        if(str1[i]==str2[j]){
-            i++;
-            j++;
-            ans++;
-        }
-        else if(str1[i]>str2[j]){
-            j++;
-        }
-        else{
-            i++;
+    for(int i=0;i<26;i++){
+        if(arr[i]!=0){
+            ans+=abs(arr[i]);
         }
     }
-    return m+n-2*ans;
+    return ans;
 }
