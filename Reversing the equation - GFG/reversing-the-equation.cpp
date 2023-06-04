@@ -23,7 +23,6 @@ class Solution
                     a="";
                 }
                 if(i==l-1){
-                    a+=s[i];
                     v.push_back(a);
                 }
                 
@@ -46,7 +45,7 @@ class Solution
             }
             
             // cout<<m<<" "<<n<<endl;
-            adi.erase(1,1);
+            // adi.erase(1,1);
             return adi;
         }
 };
