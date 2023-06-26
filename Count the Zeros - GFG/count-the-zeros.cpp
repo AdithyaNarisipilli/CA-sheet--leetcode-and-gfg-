@@ -10,11 +10,25 @@ using namespace std;
 class Solution{   
 public:
     int countZeroes(int arr[], int n) {
-        for(int i=0;i<n;i++){
-            if(arr[i]==0){
-                return n-i;
+        //given to do in O(logn) complexity
+        int low=0,high=n-1;
+        int mid=(low+high)/2;
+        while(low<=high){
+            mid=(low+high)/2;
+            if(((mid == 0 || arr[mid - 1] == 1) &&
+                         arr[mid] == 0)){
+                return n-mid;
+            }
+            else if(arr[mid]==1) {
+                low=mid+1;
+            }
+            else if(arr[mid]==0){
+                high=mid-1;
             }
         }
+        
+        
+        
     }
 };
 
