@@ -10,18 +10,28 @@ class Solution{
 public:
 	int countZeros(vector<vector<int>>A)
 	{
-	    int m=A.size();
-	    int n=A[0].size();
-	    int count=0;
-		for(int i=0;i<m;i++){
-		    for(int j=0;j<n;j++){
-		        if(A[i][j]==1){
-		            count+=n-j;
-		            break;
-		        }
-		    }
-		}
-		return m*m-count;
+	    int n=A.size();
+	    int i=0,j=0;
+	    int ans=0;
+	    while(i<n&&j<n){
+	        if(A[i][j]==0){
+	            ans++;
+	            j++;
+	            if(j==n)
+	            {
+	                i++;
+	                j=0;
+	            }
+	        }
+	        else{
+	            i++;
+	            j=0;
+	        }
+	    }
+	    return ans;
+	    
+	    
+	    
 	
 	}
 };
