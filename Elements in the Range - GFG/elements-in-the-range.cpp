@@ -10,17 +10,15 @@ class Solution{
 	bool check_elements(int arr[], int n, int A, int B)
 	{
 	    set<int>s;
-		for(int i=0;i<n;i++){
-		    if(arr[i]>=A&&arr[i]<=B){
-		        s.insert(arr[i]);
-		    }
-		}
-		if(s.size()==B-A+1){
-		    return 1;
-		}
-		else{
-		    return 0;
-		}
+	    for(int i=0;i<n;i++){
+	        if(arr[i]>=A&&arr[i]<=B){
+	            s.insert(arr[i]);
+	        }
+	    }
+	    if(s.size()==B-A+1){
+	        return 1;
+	    }
+	    return 0;
 	}
 
 
