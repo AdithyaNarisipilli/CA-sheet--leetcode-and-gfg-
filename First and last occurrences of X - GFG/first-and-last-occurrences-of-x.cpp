@@ -6,27 +6,45 @@ using namespace std;
 class Solution {
   public:
     vector<int> firstAndLast(vector<int> &arr, int n, int x) {
+        int low=0;
+        int high=n-1;
         vector<int>v;
-        for(int i=0;i<n;i++){
-            if(arr[i]==x){
-                v.push_back(i);
-                break;
+        int res1=-1;
+        int res2=-1;
+        while(low<=high){
+            int mid=low+high>>1;
+            if(arr[mid]==x){
+                res1=mid;
+                high=mid-1;
             }
-            
-        }
-        for(int i=n-1;i>=0;i--){
-            if(arr[i]==x){
-                v.push_back(i);
-                break;
+            else if(arr[mid]>x){
+                high=mid-1;
             }
-            
+            else{
+                low=mid+1;
+            }
         }
-        if(v.size()==0){
+        v.push_back(res1);
+         low=0;
+         high=n-1;
+        while(low<=high){
+            int mid=low+high>>1;
+            if(arr[mid]==x){
+                res2=mid;
+                low=mid+1;
+            }
+            else if(arr[mid]>x){
+                high=mid-1;
+            }
+            else{
+                low=mid+1;
+            }
+        }
+        v.push_back(res2);
+        if(v[0]==-1||v[1]==-1){
             return {-1};
         }
-        else{
-            return v;
-        }
+        return v;
     }
 };
 
