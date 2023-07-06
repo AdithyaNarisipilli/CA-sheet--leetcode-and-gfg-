@@ -17,13 +17,21 @@ class Solution
         }
         long long int numberCount(long long int N, long long int K)
         {
-            int count=0;
-            for(long long i=1;i<=N;i++){
-                if(abs(i-sumOfdigits(i))>=K){
-                    count++;
+            long long int low=1;
+            long long int high=N;
+            while(low<=high){
+                long long int mid=low+(high-low)/2;
+                if((mid-sumOfdigits(mid))<K&&((mid+1)-sumOfdigits(mid+1))>=K){
+                    return N-mid;
+                }
+                if((mid-sumOfdigits(mid))<K){
+                    low=mid+1;
+                }
+                else{
+                    high=mid-1;
                 }
             }
-            return count;
+            return 0;
         }
 };
 
