@@ -9,6 +9,8 @@ class Solution{
     vector<int>sortArr(vector<int>arr,int n){
         sort(arr.begin(),arr.end());
         return arr;
+        /*sort function uses introsort which is a combination of quicksort,
+        heapsort,insertionsort*/
     }
 };
 
