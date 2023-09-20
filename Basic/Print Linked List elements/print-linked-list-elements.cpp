@@ -30,13 +30,12 @@ class Solution
     public:
     void display(Node *head)
     {
-      //your code goes here
-      Node* ptr=head;
-        while(ptr!=NULL){
-            cout<<ptr->data<<" ";
-            ptr=ptr->next;
+        Node* trv=head;
+        while(trv->next!=NULL){
+            cout<<trv->data<<" ";
+            trv=trv->next;
         }
-        delete ptr;
+        cout<<trv->data<<" ";
     }
 };
 
