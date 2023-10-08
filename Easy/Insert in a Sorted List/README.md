@@ -1,4 +1,4 @@
-<h2><a href="https://practice.geeksforgeeks.org/problems/insert-in-a-sorted-list/1?page=1&difficulty[]=0&category[]=Linked%20List&sortBy=submissions">Insert in a Sorted List</a></h2><h3>Difficulty Level : Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">Given a linked list sorted in ascending order and an integer called <strong>data</strong>, insert&nbsp;data in the linked list such that the list remains sorted.</span></p>
+<h2><a href="https://practice.geeksforgeeks.org/problems/insert-in-a-sorted-list/1">Insert in a Sorted List</a></h2><h3>Difficulty Level : Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">Given a linked list sorted in ascending order and an integer called <strong>data</strong>, insert&nbsp;data in the linked list such that the list remains sorted.</span></p>
 <p><span style="font-size: 14pt;"><strong>Example 1:</strong></span></p>
 <pre><span style="font-size: 14pt;"><strong>Input:
 </strong>LinkedList: 25-&gt;36-&gt;47-&gt;58-&gt;69-&gt;80
