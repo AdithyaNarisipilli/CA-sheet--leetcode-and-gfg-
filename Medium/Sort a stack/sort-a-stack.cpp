@@ -50,25 +50,26 @@ public:
 
 /* The below method sorts the stack s 
 you are required to complete the below method */
-void insert(stack<int>&s,int x){
-    if(s.empty()||s.top()<=x){
-        s.push(x);
+void insertAtreq(stack<int>&s,int ele){
+    if(s.empty()||(!s.empty()&&s.top()<ele)){
+        s.push(ele);
         return;
-    }
-    int top=s.top();
-    s.pop();
-    insert(s,x);
-    s.push(top);
+    } 
+    
+        int top=s.top();
+        s.pop();
+        insertAtreq(s,ele);
+        s.push(top);
+    
 }
-
 
 void SortedStack :: sort()
 {
-    if(s.empty()){
-        return;
-    }
-   int x=s.top();
+   if(s.empty()){
+       return;
+   }
+   int top=s.top();
    s.pop();
-   sort();
-   insert(s,x);
+   SortedStack::sort();
+   insertAtreq(s,top);
 }
