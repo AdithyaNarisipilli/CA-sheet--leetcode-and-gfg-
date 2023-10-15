@@ -101,15 +101,12 @@ Node* sortedMerge(Node* head1, Node* head2)
         }
         dummy=dummy->next;
     }
-    while(ptr!=NULL){
+    if(ptr!=NULL){
         dummy->next=ptr;
-        ptr=ptr->next;
-        dummy=dummy->next;
     }
-    while(curr!=NULL){
+    if(curr!=NULL){
         dummy->next=curr;
-        curr=curr->next;
-        dummy=dummy->next;
+        
     }
     return head->next;
 }  
