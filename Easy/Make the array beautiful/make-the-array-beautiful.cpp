@@ -11,17 +11,27 @@ using namespace std;
 class Solution {
   public:
     vector<int> makeBeautiful(vector<int> arr) {
-        // code here
-         vector<int> res;
-        for(int i =0;i<arr.size();i++){
-            if(res.size() == 0)res.push_back(arr[i]);
+        stack<int>s;
+        vector<int>ans;
+        for(int i=0;i<arr.size();i++){
+            if(s.empty()){
+                s.push(arr[i]);
+            }
             else{
-                if((res.back()>0 && arr[i]<0) or (res.back()<0 && arr[i]>0) or 
-                (arr[i] == 0 and res.back()<0) or (res.back() == 0 and arr[i]<0))res.pop_back();
-                else res.push_back(arr[i]);
+                if((s.top()>=0&&arr[i]<0)||(s.top()<0&&arr[i]>=0)){
+                    s.pop();
+                }
+                else{
+                    s.push(arr[i]);
+                }
             }
         }
-        return res;
+        while(!s.empty()){
+            ans.push_back(s.top());
+            s.pop();
+        }
+        reverse(ans.begin(),ans.end());
+        return ans;
     }
 };
 
