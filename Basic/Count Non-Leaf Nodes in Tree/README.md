@@ -3,7 +3,7 @@
 <p><span style="font-size:18px"><strong>Example:</strong></span></p>
 
 <pre><span style="font-size:18px"><strong>Input:</strong> 
-<input alt="Image" src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/tree121.gif" style="height:156px; width:259px" type="image" fdprocessedid="qdm2or">
+<input alt="Image" src="https://cdncontribute.geeksforgeeks.org/wp-content/uploads/tree121.gif" style="height:156px; width:259px" type="image" fdprocessedid="jr7cxd">
 <strong>Output:</strong>
 2
 <strong>Explanation:</strong>
